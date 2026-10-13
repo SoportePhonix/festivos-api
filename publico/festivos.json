@@ -1,0 +1,128 @@
+{
+  "desde": "2026-10-12",
+  "hasta": "2027-10-31",
+  "total": 20,
+  "generado": "2026-10-12T20:12:59-05:00",
+  "festivos": [
+    {
+      "fecha": "2026-10-12",
+      "dia": "lun",
+      "nombre": "Día de la Raza",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2026-11-02",
+      "dia": "lun",
+      "nombre": "Día de Todos los Santos (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2026-11-16",
+      "dia": "lun",
+      "nombre": "Independencia de Cartagena (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2026-12-08",
+      "dia": "mar",
+      "nombre": "La Inmaculada Concepción",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2026-12-25",
+      "dia": "vie",
+      "nombre": "Navidad",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-01-01",
+      "dia": "vie",
+      "nombre": "Año Nuevo",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-01-11",
+      "dia": "lun",
+      "nombre": "Día de los Reyes Magos (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-03-22",
+      "dia": "lun",
+      "nombre": "Día de San José (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-03-25",
+      "dia": "jue",
+      "nombre": "Jueves Santo",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-03-26",
+      "dia": "vie",
+      "nombre": "Viernes Santo",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-05-01",
+      "dia": "sáb",
+      "nombre": "Día del Trabajo",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-05-10",
+      "dia": "lun",
+      "nombre": "Ascensión del señor (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-05-31",
+      "dia": "lun",
+      "nombre": "Corpus Christi (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-06-07",
+      "dia": "lun",
+      "nombre": "Sagrado Corazón (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-07-05",
+      "dia": "lun",
+      "nombre": "San Pedro y San Pablo (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-07-12",
+      "dia": "lun",
+      "nombre": "Día de Nuestra Señora del Rosario de Chiquinquirá (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-07-20",
+      "dia": "mar",
+      "nombre": "Día de la Independencia",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-08-07",
+      "dia": "sáb",
+      "nombre": "Batalla de Boyacá",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-08-16",
+      "dia": "lun",
+      "nombre": "La Asunción (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-10-18",
+      "dia": "lun",
+      "nombre": "Día de la Raza (observado)",
+      "fuente": "ley"
+    }
+  ]
+}
