@@ -1,0 +1,35 @@
+name: Festivos próximos 12 meses
+
+on:
+  schedule:
+    # Día 1 de cada mes, 01:10 hora Colombia (UTC-5)
+    - cron: "10 6 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: festivos-publicacion   # no chocar con otra publicación en curso
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # -U: toma la última versión de la librería, que es la que recoge cambios de ley
+      - run: pip install -U "holidays>=0.82"
+      - run: python generar_proximos.py
+      - name: Publicar festivos.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add publico/festivos.json
+          git diff --cached --quiet && { echo "Sin cambios"; exit 0; }
+          git commit -m "Festivos $(jq -r .desde publico/festivos.json) a $(jq -r .hasta publico/festivos.json)"
+          git pull --rebase origin main
+          git push

@@ -5,6 +5,11 @@ La Action `.github/workflows/festivo-diario.yml` corre a las 00:05 y 03:05 (hora
 calcula si hoy es festivo y publica `publico/hoy.json`. respond.io lo lee por la URL raw:
 `https://raw.githubusercontent.com/SoportePhonix/festivos-api/main/publico/hoy.json`
 (requiere que el repo sea público). Mapeo en el paso HTTP Request: `$.festivo`.
+Además, `publico/festivos.json` lista los festivos de los próximos 12 meses. Lo regenera la Action
+`festivos-mensual.yml` el día 1 de cada mes (01:10 hora Colombia) con la última versión de la librería,
+para revisar de un vistazo que la lista esté al día. URL:
+`https://raw.githubusercontent.com/SoportePhonix/festivos-api/main/publico/festivos.json`
+
 Para forzar una actualización: Actions → "Festivo del día" → Run workflow.
 Editar `dias_especiales.json` y correr la Action manualmente aplica el cambio el mismo día.
 

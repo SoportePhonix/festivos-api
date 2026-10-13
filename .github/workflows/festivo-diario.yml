@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: festivo-diario
+  group: festivos-publicacion
   cancel-in-progress: false
 
 jobs:
@@ -30,4 +30,5 @@ jobs:
           git add publico/hoy.json
           git diff --cached --quiet && { echo "Sin cambios"; exit 0; }
           git commit -m "Festivo del día $(jq -r .fecha publico/hoy.json)"
+          git pull --rebase origin main
           git push
