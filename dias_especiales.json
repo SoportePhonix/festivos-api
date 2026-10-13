@@ -1,0 +1,9 @@
+{
+  "_ayuda": "cerrados: días sin atención aunque no sean festivo legal. habiles: festivos legales en que SÍ se atiende. Formato AAAA-MM-DD. Los cambios aplican sin reiniciar.",
+  "cerrados": [],
+  "habiles": [],
+  "_ejemplo": {
+    "fecha": "2026-12-24",
+    "nombre": "Nochebuena"
+  }
+}

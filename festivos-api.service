@@ -1,0 +1,13 @@
+[Unit]
+Description=API de festivos Colombia (respond.io)
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/opt/festivos-api
+Environment=API_KEY=CAMBIAR_POR_UNA_CLAVE_LARGA
+ExecStart=/opt/festivos-api/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

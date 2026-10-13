@@ -1,0 +1,19 @@
+services:
+  festivos-api:
+    build: .
+    image: festivos-api:latest
+    container_name: festivos-api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DIAS_ESPECIALES: /data/dias_especiales.json
+      TZ: America/Bogota
+    ports:
+      - "127.0.0.1:8000:8000"   # solo local; publicar vía nginx/Caddy con HTTPS
+    volumes:
+      - ./dias_especiales.json:/data/dias_especiales.json:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/salud', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
