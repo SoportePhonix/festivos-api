@@ -1,0 +1,33 @@
+name: Festivo del día
+
+on:
+  schedule:
+    # 00:05 y 03:05 hora Colombia (UTC-5). La segunda corrida cubre retrasos del cron de GitHub.
+    - cron: "5 5,8 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: festivo-diario
+  cancel-in-progress: false
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "holidays>=0.82"
+      - run: python generar_hoy.py
+      - name: Publicar hoy.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add publico/hoy.json
+          git diff --cached --quiet && { echo "Sin cambios"; exit 0; }
+          git commit -m "Festivo del día $(jq -r .fecha publico/hoy.json)"
+          git push
