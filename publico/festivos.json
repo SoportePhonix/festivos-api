@@ -1,15 +1,9 @@
 {
-  "desde": "2026-10-12",
-  "hasta": "2027-10-31",
-  "total": 20,
-  "generado": "2026-10-12T20:12:59-05:00",
+  "desde": "2026-11-01",
+  "hasta": "2027-11-30",
+  "total": 21,
+  "generado": "2026-11-01T08:15:27-05:00",
   "festivos": [
-    {
-      "fecha": "2026-10-12",
-      "dia": "lun",
-      "nombre": "Día de la Raza",
-      "fuente": "ley"
-    },
     {
       "fecha": "2026-11-02",
       "dia": "lun",
@@ -122,6 +116,18 @@
       "fecha": "2027-10-18",
       "dia": "lun",
       "nombre": "Día de la Raza (observado)",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-11-01",
+      "dia": "lun",
+      "nombre": "Día de Todos los Santos",
+      "fuente": "ley"
+    },
+    {
+      "fecha": "2027-11-15",
+      "dia": "lun",
+      "nombre": "Independencia de Cartagena (observado)",
       "fuente": "ley"
     }
   ]
